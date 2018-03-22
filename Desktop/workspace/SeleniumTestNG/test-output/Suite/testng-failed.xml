@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="suite-level-param" value="This is suite level param"/>
+  <test thread-count="5" name="Suite Test3(failed)">
+    <parameter name="suite-level-param" value="Overriding suite level param"/>
+    <parameter name="test-level-param1" value="This is test level param1"/>
+    <classes>
+      <class name="com.testng.ParameterizeTestNG">
+        <methods>
+          <include name="thirdTest"/>
+        </methods>
+      </class> <!-- com.testng.ParameterizeTestNG -->
+    </classes>
+  </test> <!-- Suite Test3(failed) -->
+</suite> <!-- Failed suite [Suite] -->

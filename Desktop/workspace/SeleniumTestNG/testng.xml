@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="suite-level-param" value="This is suite level param" />
+	<test thread-count="5" name="Suite Test1">
+		<classes>
+			<class name="com.testng.ParameterizeTestNG">
+				<methods>
+					<include name="firstTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="5" name="Suite Test2">
+		<parameter name="test-level-param" value="This is test level param" />
+		<classes>
+			<class name="com.testng.ParameterizeTestNG">
+				<methods>
+					<include name="secondTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="5" name="Suite Test3">
+		<parameter name="suite-level-param" value="Overriding suite level param"/>
+		<parameter name="test-level-param1" value="This is test level param1"/>
+		<classes>
+			<class name="com.testng.ParameterizeTestNG">
+				<methods>
+					<include name="thirdTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->
